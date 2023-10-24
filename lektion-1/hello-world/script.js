@@ -17,3 +17,5 @@ option + cmd + j */
 document.write("<h1>Hello</h1>");
 console.log('hej');
 console.log('Hej hej hej hej hej hej hej hej hej hej');
+console.warn('Hej hej hej hej hej hej hej');
+console.error('.error() = Hej hej hej hej hej hej hej');
