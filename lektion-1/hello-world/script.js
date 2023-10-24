@@ -14,8 +14,16 @@ during the development */
 /* Open console in Google Chrome on MacOS:
 option + cmd + j */
 
-document.write("<h1>Hello</h1>");
-console.log('hej');
-console.log('Hej hej hej hej hej hej hej hej hej hej');
-console.warn('Hej hej hej hej hej hej hej');
-console.error('.error() = Hej hej hej hej hej hej hej');
+
+console.log('Meddelandde');
+console.warn('Varnning  hej hej hej');
+console.error('.error() = Errooooooorrrhej');
+
+
+/* Change a queryselector in browser console:
+
+document.querySelector('#main > div.hyperion-css-bxg8le > main > section > div:nth-child(4) > div.hyperion-css-5n031k > a > div.hyperion-css-1gs8giq > h2').innerText = 'hej tvåååå'
+
+*/
+
+
