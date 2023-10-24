@@ -68,3 +68,46 @@ const {firstName, lastName} = person
 
 
 console.log('Hej ' + person);
+
+const apple = "Granny Smit"
+
+console.log('hejj');
+
+
+class User {
+    constructor(firstName, lastName, email, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.id = Math.random() * 1001;
+        this.fullName = this.firstName + ' ' + this.lastName
+    }
+    login () {
+        this.loggedIn = true;
+    }
+    logout () {
+        this.loggedOut = true;
+    }
+}
+// user2.login() {
+// console.log(user2);
+
+
+const user2 = new User('Kalle', 'Andersson', 'hej@hej.com', 36)
+const user3 = new User('Sandra', 'Eriksson', 'hej@hej.com', 47)
+
+console.log(user2);
+
+
+
+class Admin extends User {
+    constructor (adminId, firstName, lastName, email, age) {
+        super(adminId, firstName, lastName, email, age)
+        this.adminId = adminId
+    }
+}
+
+const admin = new Admin(1, 'Hans', 'Svensson', 'emails@hej.com', 78);
+console.log(admin);
+
