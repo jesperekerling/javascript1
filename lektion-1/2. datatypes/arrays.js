@@ -45,7 +45,7 @@ names.splice(1, 1)
 
 
 
-// Plugga på splice och indexof
+// Study this: splice and indexof
 
 console.log(names)
 
