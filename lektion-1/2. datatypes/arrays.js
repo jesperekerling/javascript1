@@ -45,8 +45,24 @@ names.splice(1, 1)
 
 
 
-// Study this: splice and indexof
+// Study this: splice and indexof, concat, spreah operator
 
 console.log(names)
 
 
+const obj = {
+    fName: 'JohnnnyyOO',
+    lName: 'KEEEKKK'
+}
+const obj2 = {
+    ...obj,
+    lName: 'KEEEKK222',
+    fName: 'dsuhaiu'
+}
+console.log (obj)
+
+names.sort((a,b) => {
+    return Math.random() - 0.5
+    }
+)
+console.log(names)
