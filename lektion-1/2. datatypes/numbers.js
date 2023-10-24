@@ -27,3 +27,10 @@ console.log(num1);
 let string1 = "20";
 
 console.log(num1 + +string1); // Converts string1 to a string wiht a + sign
+
+console.log(Math.random() * 100);
+let roundedNumber = Math.random() * 100;
+let randomer = Math.ceil(roundedNumber);
+let randomer2 = Math.round(roundedNumber);
+console.log(randomer);
+console.log(randomer2);
