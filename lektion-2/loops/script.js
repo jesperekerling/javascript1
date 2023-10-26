@@ -63,9 +63,10 @@ users.forEach(function(user, i) {
 
 // MAP
 
-//const newUsers = users.map(function(user, i) {
-//    return (...user, status: false)
-//})
+const newUsers = users.map(function(user, i) {
+    return {...user, status: false}
+})
+console.log(newUsers)
 
 
 // while loop
