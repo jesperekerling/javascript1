@@ -28,4 +28,27 @@ if (user.active) {
     console.log(`${user.name} is active`)
 }
 
+if (user.active == true) {
+    console.log(`${user.name} is active`)
+}
 
+
+console.log(3 > 2)
+
+console.log(2 <= 2)
+
+for(let i = 0; i < 7; i++) {
+    console.log(i)
+}
+
+user.active = false;
+
+// && both if statements must me true
+if(user.active === false && user.name === 'jesper') {
+    console.log('user is not active')
+}
+
+// || one of the if statements must be true
+if(user.active === false || user.name === 'jesper') {
+    console.log('hej')
+}
