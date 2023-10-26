@@ -28,8 +28,21 @@ body {
     padding: .5rem;
     user-select: none;
     cursor: pointer;
-    &:hover,
-    &:focus-visible {
-        background-color: #ddd;
+}
+.item:hover, .item:focus-visible  {
+    background-color: #ddd;
+}
+.center {
+    text-align: center;
+
+    & input,
+    button {
+        padding: .3rem;
+        border-radius: .5rem;
+        border: 0;
+    }
+    & button {
+        background-color: #333;
+        color: white;
     }
 }
