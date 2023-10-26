@@ -122,8 +122,14 @@ const me = users.shift()
 console.log(me)
 
 // find = whole Object
-// findObject = find specific thing in object
+// findIndex = find specific thing in object
 
 const kalle = users.find(user => user.name === `Kalle`)
 console.log(kalle)
+
+users.splice(1, 0, { id: 3, name: `Kalle2`, age: 45 })
+console.log(users)
+console.log(users[0].name)
+
+// Splice --> change or remove objects in an array
 
