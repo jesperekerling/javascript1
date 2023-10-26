@@ -13,6 +13,16 @@ function renderNames () {
         p.classList.add('item')
         p.innerText = name
 
+        p.addEventListener('click', () => {
+            consolg.log(p)
+        })
         leftBox.appendChild(p)
+    });
+    rightNames.forEach(name => {
+        const p = document.createElement('p')
+        p.classList.add('item')
+        p.innerText = name
+
+        rightBox.appendChild(p)
     });
 }
