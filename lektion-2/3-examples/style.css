@@ -22,5 +22,14 @@ body {
     border: 1px solid #444;
     min-height: 8rem;
     border-radius: 1rem;
-    padding: 1rem;
+    overflow: hidden;
+}
+.item {
+    padding: .5rem;
+    user-select: none;
+    cursor: pointer;
+    &:hover,
+    &:focus-visible {
+        background-color: #ddd;
+    }
 }
