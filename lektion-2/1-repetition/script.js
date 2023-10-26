@@ -38,3 +38,31 @@ let text = 'text with single citation'
 text = "new text med double citations"
 text = `text with literal (backticks) ${1+6}`
 console.log(text)
+
+
+const firstName = 'Janne'
+const lastName = 'Andersson'
+
+const fullName = firstName + ' ' + lastName
+console.log(fullName [0])
+// Write first letter from variable
+
+const initials = firstName [0] + lastName [0]
+console.log(initials)
+
+// Check up substring
+
+
+// NUMBERS
+
+let number = 20
+number += 20
+number++
+console.log(number)
+
+
+
+
+
+    // Frågor, clg???
+    // Frågor, text om funktionerna???
