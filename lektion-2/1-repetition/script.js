@@ -64,5 +64,21 @@ console.log(number)
 
 
 
-    // Frågor, clg???
-    // Frågor, text om funktionerna???
+// Frågor, clg???
+// Frågor, text om funktionerna???
+
+
+// OBJECTS
+
+const obj1 = {
+    key: `value11`,
+    key2: `value2`
+}
+
+console.log(obj1.key)
+console.log(obj1)
+
+obj1.name = `Janne222`
+console.log(obj1)
+
+// functions can be added to objects
