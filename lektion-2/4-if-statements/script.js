@@ -55,4 +55,33 @@ if(user.active === false || user.name === 'jesper') {
 
 if(1==1 && 2==2 || 1==1 && 4==4) {
     console.log('both are true')
-}  
+}
+
+user.active = true;
+
+if(user.active)
+    console.log('user is active')
+else
+    console.log('user is not active')
+
+
+user.active ? console.log('user is active') : console.log('user is not active')
+
+user.active
+    ? console.log('user is active')
+    : console.log('user is not active')
+
+let text = `User2 is ${user.active ? 'active' : 'not active'}`
+console.log(text)
+
+// Example of halv bad if statement
+user.active
+    ? 2 === 2 ? console.log('2 is 2') : console.log('2 is not 2')
+    : console.log('user is not active')
+
+
+// User switch instead of long it statements
+
+// SWITCH
+
+const color = 'black'
