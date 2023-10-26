@@ -85,3 +85,4 @@ do {
     j++
 } while(j < 10)
 console.log('i är nu: ' + j)
+
