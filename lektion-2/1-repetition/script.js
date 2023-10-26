@@ -82,3 +82,48 @@ obj1.name = `Janne222`
 console.log(obj1)
 
 // functions can be added to objects
+
+
+// Example of JSON, JSON is a long text string
+const json = JSON.stringify(obj1)
+console.log(typeof json) //Check type of string
+console.log(json)
+
+
+const js = JSON.parse(json)
+console.log(js)
+
+
+// ARRAYS
+// A list of whatever you want (text, boolean, numbers, objects, arrays)
+
+const users = [
+    { id: 1, name: `Janne`, age: 30},
+    { id: 2, name: `Kalle`, age: 40},
+    { id: 3, name: `Anna`, age: 20}
+]
+
+console.log(users)
+
+// Structure arrays with the same type of data on same positions for good structure
+
+// Accessing data in arrays
+console.log(users[0].name)
+
+/*
+unshift() = Adds to beginning of array
+push() = Adds to end of array
+shift() = Deletes in the end of an array and returns the value
+pop() = Deletes in the end of an array and returns the value
+
+*/
+
+const me = users.shift()
+console.log(me)
+
+// find = whole Object
+// findObject = find specific thing in object
+
+const kalle = users.find(user => user.name === `Kalle`)
+console.log(kalle)
+
