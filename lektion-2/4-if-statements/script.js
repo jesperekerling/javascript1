@@ -50,5 +50,5 @@ if(user.active === false && user.name === 'jesper') {
 
 // || one of the if statements must be true
 if(user.active === false || user.name === 'jesper') {
-    console.log('hej')
+    console.log('At least something is correct here')
 }
