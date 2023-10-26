@@ -52,3 +52,7 @@ if(user.active === false && user.name === 'jesper') {
 if(user.active === false || user.name === 'jesper') {
     console.log('At least something is correct here')
 }
+
+if(1==1 && 2==2 || 1==1 && 4==4) {
+    console.log('both are true')
+}  
