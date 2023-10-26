@@ -84,4 +84,29 @@ user.active
 
 // SWITCH
 
-const color = 'black'
+const color = 'yellow'
+if(color === 'black') {
+    console.log('color is black')
+}
+else if(color === 'red') {
+    console.log('color is red')
+}
+else if(color === 'blue') {
+    console.log('color is blue')
+}
+
+
+// Switch is faster than if statements
+switch(color) {
+    case 'black':
+        console.log('color is black')
+        break
+    case 'white':
+        console.log('color is blue')
+        break
+    case 'red':
+        console.log('color is redd')
+        break;
+    default:
+        console.log('color is not black, white or red')
+}
