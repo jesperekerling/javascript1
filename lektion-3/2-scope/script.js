@@ -76,10 +76,30 @@ console.log(abc)
 
 // Function with two parameters
 const getFullName = function(firstName, lastName) {
+    if (typeof firstName !== 'string' || typeof lastName !== 'string') {
+        return
+    }
     const fullName = `${firstName} ${lastName}`
     console.log(fullName)
     return fullName
 }
 const user1 = getFullName('Jesper', 'Ekerling')
 const user2 = getFullName('Fredrik', 'Andersson')
-const user3 = getFullName('Fredrik', 'Hansson')
+const user3 = getFullName('Fredrik', 'Hansson-Storm')
+
+getFullName('Li','Andersson')
+getFullName(null, false)
+
+
+
+// Function with default values
+const add = function(num1 = 0, num2 = 0) {
+    if(isNaN(num1) || isNaN(num2)) {
+        console.error('Not a number')
+        return 0
+    }
+    let sum = +num1 + +num2 // + sign makes strings convert to numbers
+    return sum
+}
+let sum = add(8, "19")
+console.log(sum)
