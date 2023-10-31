@@ -42,3 +42,39 @@ const newUsers = users.map(function(user, index) {
     return user.age;
 })
 console.log(newUsers)
+
+
+
+
+
+
+
+
+// If statements
+
+let value = ``;
+
+if(value.length === 0) {
+    console.log("Du måste skriva in någonting att görrraa");
+}
+else if (value.length > 3) {
+    console.log("Texten behöver lite längre");
+}
+else {
+    console.log("Bra jobbat!");
+}
+
+
+// Switch statements is more readable than if statements and also efficient
+
+switch(value) {
+    case 'Joakim':
+        console.log("Hej Joakim");
+        break;
+    case 'Kalle':
+        console.log("Hej Kalle");
+        break;
+    default:
+        console.log("Hej på dig");
+        break;
+}
