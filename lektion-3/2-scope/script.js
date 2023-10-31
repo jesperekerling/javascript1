@@ -162,3 +162,39 @@ user.arrow()
 user.regular()
 
 user.fullName()
+
+
+
+const names = ['Jesper', 'Fredrik', 'Hans', 'Li', 'Janne']
+
+
+
+names.forEach(name => {
+    
+});
+
+const myFunction = (num1, num2, cb) => {
+    let sum = num1 + num2
+    cb(sum) // Callback function
+}
+
+myFunction(2, 2, (sum) => {
+    console.log(sum)
+})
+
+myFunction(3,6, (sum) => {
+    console.log(sum)
+})
+
+const varje = (array, cb) => {
+    for(let i = 0; i < array.length; i++) {
+        cb(array[i], i)
+    }
+}
+
+varje(names, (name, i) => {
+    console.log(name)
+    console.log(i)
+})
+
+
