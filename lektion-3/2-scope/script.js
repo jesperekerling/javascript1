@@ -103,3 +103,62 @@ const add = function(num1 = 0, num2 = 0) {
 }
 let sum = add(8, "19")
 console.log(sum)
+
+
+// Arrow functions
+
+const hello1 = () => {
+    console.log('hello from arrow function')
+}
+hello1()
+
+
+const calc = (num1, num2) => {
+    return +num1 + +num2
+}
+console.log(calc(5, 2))
+
+let summa = calc(8,9)
+console.log(summa)
+
+
+const calc2 = (num1, num2) => +num1 + +num2
+console.log(calc2(15, 21))
+
+// If only one parameter
+const greet3 = name => `Hej ${name}`
+console.log(greet3('Jesper'))
+
+
+// Arrow functions is good for for loops
+// Normal functions is usually function()
+
+let myName = 'Jesper'
+let upper = myName.toUpperCase()
+console.log(upper)
+
+
+const user = {
+    firstName: 'Jesper',
+    lastName: 'Ekerling',
+    fullName: function() {
+        return `${this.firstName} ${this.lastName}`
+    },
+    arrow: () => {
+        console.log(`Arrow function `, this)
+    },
+    regular: function() {
+        console.log(`Regular function `, this)
+    },
+    fullName2: function() {
+        console.log(this.firstName + ' ' + this.lastName)
+    }
+}
+console.log(user.fullName())
+
+console.log(user.fullName2())
+
+user.arrow()
+user.regular()
+
+user.fullName()
