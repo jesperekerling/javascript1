@@ -65,10 +65,10 @@ btn.addEventListener('click', () => {
     <div id="three">three</div>
     <div id="four">four</div>
   `
-  btn.disabled = true
+  btn.disabled = false
 })
 btn2.addEventListener('click', () => {
-  console.log('Div#1 text changed')
+  console.log('Div#one text changed')
 
   document.querySelector('#output').innerHTML = `
     <div id="one">någonting annat</div>
@@ -76,8 +76,8 @@ btn2.addEventListener('click', () => {
     <div id="three">three</div>
     <div id="four">four</div>
   `
-  btn.disabled = true
+  btn2.disabled = false
 })
-
+document.querySelector
 
 // UPPGIFT gör så att när man klickar på "ändra" så ändras texten i div#one till någonting annat
