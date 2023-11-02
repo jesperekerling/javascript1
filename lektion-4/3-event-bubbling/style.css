@@ -10,3 +10,13 @@ body {
 #div1 {
     background-color: blue;
 }
+.user {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid black;
+    width: 100px;
+}
+.active {
+    background-color: yellow;
+}
