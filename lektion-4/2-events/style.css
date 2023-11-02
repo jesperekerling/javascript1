@@ -6,3 +6,13 @@ body {
     width: 200px;
     height: 100px;
 }
+
+form {
+    margin-top: 200px;
+}
+#username:focus {
+    border: 2px solid orange;
+}
+.focus-red {
+    color: red;
+}
