@@ -1,0 +1,39 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    background-color: #eee;
+    height: 100vh;
+    padding-top: 5rem;
+}
+.faq {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease-in-out;
+    padding: 0 1rem;
+}
+.expandable {
+    max-height: 0;
+}
+.answer.open {
+    grid-template-rows: 1fr;
+    padding: 1rem;
+}
