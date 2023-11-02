@@ -57,7 +57,7 @@ const list = document.querySelector('#list')
 const btn = document.querySelector('#btn')
 
 btn.addEventListener('click', () => {
-  console.log('klikck')
+  console.log('Added divs')
 
   document.querySelector('#output').innerHTML = `
     <div id="one">one</div>
@@ -68,7 +68,7 @@ btn.addEventListener('click', () => {
   btn.disabled = true
 })
 btn2.addEventListener('click', () => {
-  console.log('Change button clicked')
+  console.log('Div#1 text changed')
 
   document.querySelector('#output').innerHTML = `
     <div id="one">någonting annat</div>
