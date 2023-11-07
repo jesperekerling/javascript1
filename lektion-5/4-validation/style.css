@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+.my-3 {
+    margin-block: 2.5rem;
+}
+#regForm {
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 3px 3px 6px #999;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
