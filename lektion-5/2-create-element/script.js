@@ -1,27 +1,7 @@
 const commentForm = document.querySelector('#comment-form');
 const commentsDiv = document.querySelector('#comments')
 
-commentForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const input = document.querySelector('#comment-input')
-
-    if (input.value.trim() === '') return
-
-    const newId = crypto.randomUUID()
-
-
-    commentsDiv.innerHTML += `
-    <div id="${newId}" class="comment">
-        <p>${input.value}</p>
-    </div>
-    `
-    input.value = ''
-    
-    //document.getElementById(newId).addEventListener('click', e => {
-//        e.currentTarget.classList.add('active')
-    //});
-
-});
+/*
 
 commentsDiv.addEventListener('click', e => {
     console.log(e.target.nodeName)
@@ -35,3 +15,38 @@ commentsDiv.addEventListener('click', e => {
     }
 });
 
+*/
+
+commentForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const input = document.querySelector('#comment-input')
+
+    if (input.value.trim() === '') return
+    const newId = crypto.randomUUID()
+
+/*
+    commentsDiv.innerHTML += `
+    <div id="${newId}" class="comment">
+        <p>${input.value}</p>
+    </div>
+    `
+*/
+
+    // insertAdjacentHTMl ger mer möjligheter än innerHTML
+    // commentsDiv.insertAdjacentHTML('beforeend', `
+    // <div id="${newId}" class="comment">
+    //     <p>${input.value}</p>
+    // </div>
+    // `)
+    // input.value = ''
+    
+    // document.getElementById(newId).addEventListener('click', e => {
+    //     e.currentTarget.classList.add('active')
+    // });
+
+});
+
+
+
+// Create Element
+commentForm.addEventListener('submit', e =
