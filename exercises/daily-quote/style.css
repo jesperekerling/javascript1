@@ -18,4 +18,9 @@ button {
     color: #fff;
     border-radius: 1em;
     margin: 2rem 0 6rem 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #000;
 }
