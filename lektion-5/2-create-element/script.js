@@ -55,6 +55,15 @@ commentForm.addEventListener('submit', e => {
     const input = document.querySelector('#comment-input');
     if(input.value.trim() === '') return
 
+    const comment = createCommentElement(input.value)
+    commentsDiv.appendChild(comment)
+
+    input.value = ''
+    input.focus()
+})
+
+function createCommentElement(value) {
+
     const comment = document.createElement('div')
     comment.classList.add('comment')
     comment.addEventListener('click', e => {
@@ -62,11 +71,9 @@ commentForm.addEventListener('submit', e => {
     });
 
     const commentText = document.createElement('p')
-    commentText.textContent = input.value
+    commentText.textContent = value //textContent makes input data safe
 
     comment.appendChild(commentText)
-    commentsDiv.appendChild(comment)
 
-    input.value = ''
-
-})
+    return comment
+}
