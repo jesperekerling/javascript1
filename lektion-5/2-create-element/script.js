@@ -49,4 +49,24 @@ commentForm.addEventListener('submit', e => {
 
 
 // Create Element
-commentForm.addEventListener('submit', e =
+commentForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const input = document.querySelector('#comment-input');
+    if(input.value.trim() === '') return
+
+    const comment = document.createElement('div')
+    comment.classList.add('comment')
+    comment.addEventListener('click', e => {
+        comment.classList.add('active')
+    });
+
+    const commentText = document.createElement('p')
+    commentText.textContent = input.value
+
+    comment.appendChild(commentText)
+    commentsDiv.appendChild(comment)
+
+    input.value = ''
+
+})
