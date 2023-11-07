@@ -25,5 +25,29 @@ body {
     box-shadow: 3px 3px 6px #999;
 }
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
+
+    & label {
+        display: block;
+        font-size: 0.95rem;
+    }
+}
+.form-control {
+    width: 100%;
+    padding: 0.4em;
+    font-size: 1rem;
+    border: 1px solid #333;
+}
+
+.error {
+    font-size: 0.8rem;
+    color: red;
+}
+.btn {
+    padding: .5rem 2.4rem;
+    border: 0;
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 0.4em;
+    cursor: pointer;
 }
