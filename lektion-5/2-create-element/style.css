@@ -59,4 +59,9 @@ img {
     border: 1px solid #ffe9e9;
     border-radius: .7rem;
     margin-bottom: 1rem;
+    cursor: pointer;
+}
+.active {
+    background-color: darkgreen;
+    color: #fff;
 }
