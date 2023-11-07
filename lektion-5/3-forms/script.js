@@ -9,7 +9,6 @@ regForm.addEventListener('submit', e => {
     const lastNameValue = regForm.lastName;
     const addressValue = document.querySelector('#address').value; // Teacher likes this way
     const roleValue = e.currentTarget.role.value;
-    const termsValue = e.currentTarget.terms.value;
 
     const user = {
         firstName: firstNameValue,
