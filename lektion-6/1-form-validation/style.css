@@ -64,3 +64,7 @@ h1, h2 {
     display: block;
     visibility: visible;
 }
+i {
+    color: #fff;
+    width: 30px;
+}
