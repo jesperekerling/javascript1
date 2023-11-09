@@ -11,8 +11,17 @@ regForm.addEventListener('submit', e => {
     e.preventDefault()
 
 
-    validateForm()
-  
+    if(!validateForm()) {
+        console.log('Form Error!')
+    }
+    const user = {
+        id: crypto.randomUUID(),
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email.value,
+        password: password.value
+    }
+    console.log(user)
     /*
     if(
         validateText(firstName) &&
