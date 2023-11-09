@@ -65,6 +65,12 @@ h1, h2 {
     visibility: visible;
 }
 i {
-    color: #fff;
+    color: #000;
     width: 30px;
+}
+.icon {
+    position: absolute;
+    right: .5rem;
+    top: 2.1rem;
+    display: none;
 }
