@@ -2,13 +2,35 @@ body {
     margin: 3rem auto;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #eee;
+}
+
+h1 {
+    color: rgb(74, 10, 74);
+}
+main {
+    background-color: #fff;
+    width:80%;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+figure {
+    min-height: 15rem;
+    padding-top: 3rem;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 blockquote {
-    font-size: 1.3rem;
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
 }
 figcaption {
     font-size: 1.1rem;
+    color: #666;
 }
 
 button {
@@ -20,6 +42,7 @@ button {
     margin: 2rem 0 6rem 0;
     font-weight: 600;
     cursor: pointer;
+    font-size: 1.1rem;
 }
 button:hover {
     background-color: #000;

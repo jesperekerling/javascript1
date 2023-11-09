@@ -1,8 +1,6 @@
 const generateQuote = function() {
 
-
-
-  const quotes = [
+const quotes = [
       {
         id: 1,
         content: 'Att ha många vänner är att inte ha några vänner.',
@@ -116,14 +114,11 @@ const generateQuote = function() {
   ]
 
   let randomQuote = Math.floor(Math.random() * quotes.length)
-  console.log(randomQuote);
 
   document.getElementById("quotes").innerHTML = quotes[randomQuote].content;
   document.getElementById("author").innerHTML = quotes[randomQuote].author;
 
 }
-
-
 
 window.onload = function() {
     generateQuote();
