@@ -10,12 +10,10 @@ const checkBox = document.querySelector('#terms')
 regForm.addEventListener('submit', e => {
     e.preventDefault()
 
-    validateText(firstName)
-    validateText(lastName)
-    validateText(email)
-    validatePassword(password, repeatPassword)
-    validateCheck(terms)
 
+    validateForm()
+  
+    /*
     if(
         validateText(firstName) &&
         validateText(lastName) &&
@@ -26,7 +24,42 @@ regForm.addEventListener('submit', e => {
         console.log('Form sent222!')
     }
     console.log('Form sent!')
+    */
 })
+
+
+function validateForm(){
+    validateText(firstName)
+    validateText(lastName)
+    validateEmail(email)
+    validatePassword(password, repeatPassword)
+    validateCheck(terms)
+
+    errors = []
+
+    for(let i = 0; i < regForm.length; i++) {
+        console.log(regForm[i])
+        errors[i] = validate(regForm[i])
+    }
+}
+
+function validate(input) {
+    switch(input.type) {
+        case 'text':
+            validateText(input)
+            break
+        case 'email':
+            validateEmail(input)
+            break
+        case 'password': return input.id === 'password' ? validatePassword(input) : samePassword(input)
+            break
+        case 'checkbox':
+            validateCheck(input)
+            break
+        default:
+            break;
+    }
+}
 
 
 function setError(input, message) {
