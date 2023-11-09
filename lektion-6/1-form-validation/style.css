@@ -72,6 +72,9 @@ i {
     top: 2.1rem;
     display: none;
 }
+.is-valid .icon {
+    display: block;
+}
 .is-valid .fa-cirle-xmark {
     display: block;
     color: red;
