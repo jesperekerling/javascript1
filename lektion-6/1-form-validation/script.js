@@ -3,8 +3,8 @@ const firstName = document.querySelector('#firstName')
 const lastName = document.querySelector('#lastName')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
-const passwordRepeat = document.querySelector('#repeat-password')
-const terms = document.querySelector('#terms')
+const repeatPassword = document.querySelector('#repeat-password')
+const checkBox = document.querySelector('#terms')
 //const submitBtn = document.querySelector('#submit-btn')
 
 regForm.addEventListener('submit', e => {
@@ -13,7 +13,19 @@ regForm.addEventListener('submit', e => {
     validateText(firstName)
     validateText(lastName)
     validateText(email)
-    validatePassword(password)
+    validatePassword(password, repeatPassword)
+    validateCheck(terms)
+
+    if(
+        validateText(firstName) &&
+        validateText(lastName) &&
+        validateText(email) &&
+        validatePassword(password, repeatPassword) &&
+        validateCheck(terms)
+    ) {
+        console.log('Form sent222!')
+    }
+    console.log('Form sent!')
 })
 
 
@@ -38,7 +50,7 @@ function validateText(input) {
         setError(input, `Name cant be empty`)
         return
     }
-    else if (input.value.length <= 2) {
+    else if (input.value.length < 2) {
         setError(input, `Name must be at least 2 characters long`)
         return
     }
@@ -52,15 +64,15 @@ function validateText(input) {
 function validateEmail(email) {
     if(email.value.trim() === '') {
         setError(email, `Email cant be empty`)
-        return
+        return false
     }
     else if (email.value.length <= 5) {
         setError(email, `Email must be at least 5 characters long`)
-        return
+        return false
     }
     else if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email.value)) {
         setError(email, `Email must be a valid email address`)
-        return
+        return true
     }
     
     setSuccess(email)
@@ -69,16 +81,35 @@ function validateEmail(email) {
 function validatePassword(password) {
     if(password.value.trim() === '') {
         setError(password, `Password cant be empty`)
-        return
+        return false
     }
     else if (!/^(?=.*\d).{5,}$/.test(password.value)) {
         setError(password, `Password must be at least 5 characters long and contain at least 1 digit`)
-        return
+        return false
     }
 
     // Sucess
     setSuccess(password)
+    return true
 }
 
 
-function samePassword(password, repeatPassword)
+function samePassword(password, repeatPassword) {
+    if(password.value !== repeatPassword.value) {
+        setError(repeatPassword, `Passwords must match`)
+        return false
+    }
+    else if (password.value.trim() === '') {
+        setError(repeatPassword, `Password cant be empty`)
+        return false
+    }
+    setSuccess(repeatPassword)
+    return true
+}
+
+function validateCheck(checkBox) {
+    if(checkBox.checked === false) {
+        setError(checkBox, `You must accept the terms`)
+        return
+    }
+}
