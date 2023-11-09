@@ -3,7 +3,7 @@ const firstName = document.querySelector('#firstName')
 const lastName = document.querySelector('#lastName')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
-const passwordConfirm = document.querySelector('#repeat-password')
+const passwordRepeat = document.querySelector('#repeat-password')
 const terms = document.querySelector('#terms')
 //const submitBtn = document.querySelector('#submit-btn')
 
@@ -77,5 +77,8 @@ function validatePassword(password) {
     }
 
     // Sucess
-    setPassword(password)
+    setSuccess(password)
 }
+
+
+function samePassword(password, repeatPassword)
