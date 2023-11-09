@@ -1,9 +1,9 @@
 const regForm = document.querySelector('#regForm')
-const firstName = document.querySelector('#first-name')
-const lastName = document.querySelector('#last-name')
+const firstName = document.querySelector('#firstName')
+const lastName = document.querySelector('#lastName')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
-const passwordConfirm = document.querySelector('#password-confirm')
+const passwordConfirm = document.querySelector('#repeat-password')
 const terms = document.querySelector('#terms')
 //const submitBtn = document.querySelector('#submit-btn')
 
@@ -13,21 +13,24 @@ regForm.addEventListener('submit', e => {
     validateText(firstName)
     validateText(lastName)
     validateText(email)
-
+    validatePassword(password)
 })
 
 
 function setError(input, message) {
+    console.log(1)
+
     const parent = input.parentElement;
-    parent.classList.add('.is-invalid')
-    parent.classList.remove('.is-valid')
+    console.log(parent)
+    parent.classList.add('is-invalid')
+    parent.classList.remove('is-valid')
     const errorElement = parent.querySelector('.invalid-input')
     errorElement.innerText = message
 }
 function setSuccess(input) {
     const parent = input.parentElement;
-    parent.classList.remove('.is-invalid')
-    parent.classList.add('.is-valid')
+    parent.classList.remove('is-invalid')
+    parent.classList.add('is-valid')
 }
 
 function validateText(input) {
@@ -51,7 +54,7 @@ function validateEmail(email) {
         setError(email, `Email cant be empty`)
         return
     }
-    else if (input.value.length <= 5) {
+    else if (email.value.length <= 5) {
         setError(email, `Email must be at least 5 characters long`)
         return
     }
@@ -61,4 +64,18 @@ function validateEmail(email) {
     }
     
     setSuccess(email)
+}
+
+function validatePassword(password) {
+    if(password.value.trim() === '') {
+        setError(password, `Password cant be empty`)
+        return
+    }
+    else if (!/^(?=.*\d).{5,}$/.test(password.value)) {
+        setError(password, `Password must be at least 5 characters long and contain at least 1 digit`)
+        return
+    }
+
+    // Sucess
+    setPassword(password)
 }
