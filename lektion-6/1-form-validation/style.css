@@ -67,7 +67,7 @@ i {
     width: 30px;
 }
 .icon {
-    position: absolute;
+    position: relative;
     right: .5rem;
     top: 2.1rem;
     display: none;
