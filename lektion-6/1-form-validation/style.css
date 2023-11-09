@@ -11,6 +11,7 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--clr-bg);
+    color: #222;
 }
 h1, h2 {
     text-align: center;
@@ -58,14 +59,11 @@ h1, h2 {
 }
 .invalid-input {
     display: none;
-    visibility: hidden;
 }
 .is-valid .invalid-input {
     display: block;
-    visibility: visible;
 }
 i {
-    color: #000;
     width: 30px;
 }
 .icon {
@@ -73,4 +71,12 @@ i {
     right: .5rem;
     top: 2.1rem;
     display: none;
+}
+.is-valid .fa-cirle-xmark {
+    display: block;
+    color: red;
+}
+.is-valid .fa-check {
+    display: block;
+    color: green;
 }
