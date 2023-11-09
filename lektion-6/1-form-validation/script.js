@@ -60,7 +60,5 @@ function validateEmail(email) {
         return
     }
     
-        // success
-    
     setSuccess(email)
 }
