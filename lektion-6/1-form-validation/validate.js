@@ -1,44 +1,5 @@
-import {validateForm} from './validate.js'
-
-const regForm = document.querySelector('#regForm')
-const firstName = document.querySelector('#firstName')
-const lastName = document.querySelector('#lastName')
-const email = document.querySelector('#email')
-const password = document.querySelector('#password')
-const repeatPassword = document.querySelector('#repeat-password')
-const checkBox = document.querySelector('#terms')
-//const submitBtn = document.querySelector('#submit-btn')
-
-regForm.addEventListener('submit', e => {
-    e.preventDefault()
 
 
-    if(!validateForm()) {
-        console.log('Form Error!')
-    }
-    const user = {
-        id: crypto.randomUUID(),
-        firstName: firstName.value,
-        lastName: lastName.value,
-        email: email.value,
-        password: password.value
-    }
-    console.log(user)
-    /*
-    if(
-        validateText(firstName) &&
-        validateText(lastName) &&
-        validateText(email) &&
-        validatePassword(password, repeatPassword) &&
-        validateCheck(terms)
-    ) {
-        console.log('Form sent222!')
-    }
-    console.log('Form sent!')
-    */
-})
-
-/*
 function validateForm(){
     validateText(firstName)
     validateText(lastName)
@@ -46,7 +7,7 @@ function validateForm(){
     validatePassword(password, repeatPassword)
     validateCheck(terms)
 
-    errors = []
+    const errors = []
 
     for(let i = 0; i < regForm.length; i++) {
         console.log(regForm[i])
@@ -157,4 +118,3 @@ function validateCheck(checkBox) {
         return
     }
 }
-*/
