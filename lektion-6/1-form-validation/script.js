@@ -51,7 +51,7 @@ function validate(input) {
         case 'email':
             validateEmail(input)
             break
-        case 'password': return input.id === 'password' ? validatePassword(input) : samePassword(input)
+        case 'password': return input.id === 'password' ? validatePassword(input) : samePassword(password, repeatPassword)
             break
         case 'checkbox':
             validateCheck(input)
