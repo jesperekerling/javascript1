@@ -186,6 +186,7 @@ const deletePost = (e) => {
     })
     .then(data => {
         console.log(data)
-        document.querySelector('#post',+data.id).remove()
+        //document.querySelector('#post',+data.id).remove()
+        e.target.remove()
     })
 }
