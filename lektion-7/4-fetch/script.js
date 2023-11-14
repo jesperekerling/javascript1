@@ -190,3 +190,13 @@ const deletePost = (e) => {
         e.target.remove()
     })
 }
+
+const deletePost1 = async (e) => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts' + e.target.dataset.postid, {
+        method: 'DELETE'
+    })
+    console.log(res)
+    const data = await res.json()
+    console.log(data)
+    e.target.remove()
+}
