@@ -36,7 +36,8 @@ const getPosts = async () => {
         posts.push(post)
     })
     posts.forEach(post => {
-        output.insertAdjacentHTML('beforeend', `<li>${post.title}</li>`)
+        output.insertAdjacentHTML('beforeend', `<li data-postid="${post.id}" id="${post.id}">${post.title}</li>`)
+
     })
 }
 
@@ -53,7 +54,7 @@ const post = {
     userId: 1
 }
 
-const addPost = () => {
+ const addPost1 = () => {
     fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         headers: {
@@ -67,9 +68,37 @@ const addPost = () => {
     })
     .then(data => {
         console.log(data)
-        output.insertAdjacentHTML('beforeend', `<li>${post.title}</li>`)
+        output.insertAdjacentHTML('beforeend', `<li data-postid="${post.id}" id="${post.id}">${post.title}</li>`)
+        document.querySelector(`#${post.id}`).addEventListener('click', updatePost)
     })
 }
 
 
-btn.addEventListener('click', addPost)
+const addPost = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify(post)
+    })
+
+    // error management
+    const data = await res.json()
+
+    console.log(data)
+    output.insertAdjacentHTML('beforeend', `<li>${post.title}</li>`)
+}
+
+btn.addEventListener('click', addPost1)
+
+
+
+
+// PUT
+// Updates data encrypted in a body
+
+
+const updatePost = (e) => {
+    console.log(e.target.dataset.postid)
+}
