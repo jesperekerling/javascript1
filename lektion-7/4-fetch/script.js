@@ -5,6 +5,8 @@
 const output = document.querySelector('#out')
 const posts = []
 
+
+// Fetch with .then
 /* const getPosts = async () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
@@ -21,6 +23,8 @@ const posts = []
     }
  */
 
+
+// Fetch with async/await
 const getPosts = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts')
     const data = await res.json()
