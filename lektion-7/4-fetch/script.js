@@ -99,6 +99,93 @@ btn.addEventListener('click', addPost1)
 // Updates data encrypted in a body
 
 
-const updatePost = (e) => {
+/* const updatePost = (e) => {
     console.log(e.target.dataset.postid)
+
+    fetch('https://jsonplaceholder.typicode.com/posts' + e.target.dataset.postid, {
+        method: 'PUT',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+            title: 'Updated post',
+            body: 'This is an updated post',
+            userId: 1
+        })
+        .then(res => {
+            console.log(res)
+            return res.json()
+        })
+        .then(data => {
+            console.log(data)
+            document.querySelector('#post',+data.id).textContent = data.title
+        })
+    })
+} */
+
+// updatePost()
+
+
+const updatePost2 = (e) => {
+    console.log(e.target.dataset.postid)
+
+    fetch('https://jsonplaceholder.typicode.com/posts' + e.target.dataset.postid, {
+        method: 'PACTH',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+            title: 'Patched post'
+        })
+        .then(res => {
+            console.log(res)
+            return res.json()
+        })
+        .then(data => {
+            console.log(data)
+            document.querySelector('#post',+data.id).textContent = data.title
+        })
+    })
+}
+updatePost2()
+
+/* const updatePost3 = (e) => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts' + e.target.dataset.postid, {
+        method: 'PACTH',
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+            title: 'Patched post'
+        })
+        .then(res => {
+            console.log(res)
+            return res.json()
+        })
+        .then(data => {
+            console.log(data)
+            document.querySelector('#post',+data.id).textContent = data.title
+        })
+    })
+}
+updatePost3() */
+
+console.log(res)
+
+
+
+// DELETE
+
+const deletePost = (e) => {
+    fetch('https://jsonplaceholder.typicode.com/posts' + e.target.dataset.postid, {
+        method: 'DELETE'
+    })
+    .then(res => {
+        console.log(res)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+        document.querySelector('#post',+data.id).remove()
+    })
 }
