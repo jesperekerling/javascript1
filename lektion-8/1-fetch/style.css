@@ -11,7 +11,8 @@ body {
 }
 .container {
     width: 90%;
-    margin: 0 auto;
+    margin: 2rem auto;
+    max-width: 1000px;
 }
 
 img {
@@ -22,9 +23,53 @@ img {
 header {
     background-image: url('https://plus.unsplash.com/premium_photo-1681628908641-64c458f24acd?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
-    height: 200px;
-    text-align: center;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .heading {
-    padding-top: 3rem;
+    font-size: 5rem;
+}
+.post {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+.post:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.img-container  {
+    height: 250px;
+    flex: 1;
+
+    & img {
+        object-fit: cover;
+    }
+}
+.content {
+    flex: 1;
+    padding: 1rem 3rem;
+}
+.content_title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.info, .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+.categories {
+    gap: 1rem;
+}
+.categories li {
+    list-style: none;
+    background-color: #eee;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
 }
