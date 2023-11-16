@@ -53,15 +53,18 @@ header {
     padding: 1rem 3rem;
 }
 .content_title {
-    text-align: center;
+    text-align: left;
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 .info, .categories {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: .8rem;
+
+}
+.info {
     margin-bottom: 1rem;
 }
 .categories {
@@ -72,4 +75,9 @@ header {
     background-color: #eee;
     border-radius: 1rem;
     padding: 0.3rem 1rem;
+}
+
+.post_body {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
