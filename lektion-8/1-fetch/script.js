@@ -20,7 +20,7 @@ const fetchPosts = async () => {
     }
 }
 
-fetchPosts();
+//fetchPosts();
 
 function renderPosts () {
     const output = document.querySelector('#output')
