@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch example</title>
+    <link rel="stylesheet" href="./../style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="heading">Create a new post</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <div class="input-group">
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" id="title" class="form-control" placeholder="Enter blog post title">
+                    <p class="error">Error message</p>
+                </div>
+                <div class="input-group">
+                    <label for="imgUrl" class="form-label">Image URL:</label>
+                    <input type="text" id="imgUrl" class="form-control" placeholder="URL to image">
+                    <p class="error">Error message</p>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="categories" class="form-label">Categories:</label>
+                        <input type="text" id="categories" class="form-control" placeholder="Categories seperated by ,">
+                        <p class="tooltip">Categories seperated by ,</p>
+                        <p class="error">Error message</p>
+                    </div>
+                    <div class="input-group">
+                        <label for="author" class="form-label">Author:</label>
+                        <select id="author" class="form-control">
+                            <option value="Joakim" disabled selected>Joakim</option>
+                            <option value="Hans">Hans</option>
+                            <option value="Tommy">Tommy</option>
+                        </select>
+                        <p class="error">Error message</p>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="body" class="form-label">Text:</label>
+                    <textarea id="body" cols="30" rows="10" class="form-control form-textarea"></textarea>
+                    <p class="error">Error message</p>
+                </div>
+
+                <button class="btn btn-primary">Create</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

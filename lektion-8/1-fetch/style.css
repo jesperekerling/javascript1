@@ -112,3 +112,32 @@ header {
 .flex-end {
     justify-content: end;
 }
+
+
+/* form stuff */
+
+.input-group {
+    margin-bottom: 1rem;
+}
+.form-label {
+    display: block;
+    margin-bottom: .9rem;
+}
+.form-control {
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: 1em;
+    border: 1px solid #858585;
+}
+.error {
+    color: firebrick;
+    font-size: .9rem;
+}
+.tooltip {
+    color: #999;
+}
+.row {
+    display: flex;
+    gap: 2rem;
+}
