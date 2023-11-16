@@ -26,7 +26,8 @@ function renderPosts () {
     output.innerHTML = ''
 
     posts.forEach(post => {
-        output.innerHTML += `
+        output.appendChild(createPostElement(post))
+/*        output.innerHTML += `
         <div class="post">
         <div class="img-container">
             <img src="${post.imgUrl}" alt="Hej hopp" width="800">
@@ -44,5 +45,49 @@ function renderPosts () {
             <a href="#" class="btn btn-primary bottom-right">Read more</a>
         </div>
     </div>`
+    */
     })
+}
+
+function createPostElement(post) {
+    const postDiv = createCustomElement('div','post')
+
+    const imgContainer = createCustomElement('div','img-container')
+    const img = createCustomElement('img')
+    img.setAttribute('src', post.imgUrl)
+    imgContainer.appendChild(img)
+    postDiv.appendChild(imgContainer)
+
+    const contentDiv = createCustomElement('div','content')
+    const contentTitle = createCustomElement('h2', 'content_title', post.title)
+
+    const info = createCustomElement('div', 'info')
+    const categories = createCustomElement('ul', 'categories')
+    post.categories.forEach(cat => {
+        const categoryLi = createCustomElement('li','', cat)
+        categories.appendChild(categoryLi)
+    })
+    const author = createCustomElement('p','', 'Author'+post.author)
+    const bodyDiv = createCustomElement('p', 'post_body', post.body.slice(0,100) + '...')
+    const link = createCustomElement('a','btn btn-primary bottom-right', 'Read more')
+
+    info.append(categories, author)
+
+    contentDiv.append(contentTitle, info, bodyDiv, link)
+    postDiv.append(contentDiv)
+
+    return postDiv
+}
+
+
+function createCustomElement(type, classList, text) {
+    const el = document.createElement(type)
+    if(classList && classList.length > 0) {
+        el.className = classList
+    }
+    if(text) {
+        el.className = classList
+    }
+    return el
+
 }
