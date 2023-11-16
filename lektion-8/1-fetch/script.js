@@ -1,5 +1,6 @@
 
 let posts = []
+
 const fetchPosts = async () => {
     try {
         const res = await fetch('http://localhost:3000/posts')
@@ -68,10 +69,11 @@ function createPostElement(post) {
         categories.appendChild(categoryLi)
     })
     const author = createCustomElement('p','', 'Author'+post.author)
+    info.append(categories, author)
+    
     const bodyDiv = createCustomElement('p', 'post_body', post.body.slice(0,100) + '...')
     const link = createCustomElement('a','btn btn-primary bottom-right', 'Read more')
 
-    info.append(categories, author)
 
     contentDiv.append(contentTitle, info, bodyDiv, link)
     postDiv.append(contentDiv)
@@ -86,7 +88,7 @@ function createCustomElement(type, classList, text) {
         el.className = classList
     }
     if(text) {
-        el.className = classList
+        el.textContent = text
     }
     return el
 
