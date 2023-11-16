@@ -1,0 +1,12 @@
+{
+    "post": [
+        {
+            "id": "sd23482384",
+            "title": "Blog post 1",
+            "body": "Lorem ipsum dolor sit amet, consectetur adip",
+            "author": "Jesper",
+            "categories": ["Travel", "Food"],
+            "imgUrl": "https://images.unsplash.com/photo-1682687219612-b12805df750d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
+    ]
+}
