@@ -41,4 +41,16 @@ function createPost() {
     const author = document.querySelector('#author').value
     const body = document.querySelector('#body').value
 
+    const categoryArray = categories.replace(', ', ',').split(',')
+
+    
+
+    const post = {
+        title,
+        imgUrl,
+        categories: categoryArray,
+        author,
+        body
+    }
+    console.log(post)
 }
