@@ -2,6 +2,7 @@ const form = document.querySelector('#createForm')
 
 form.addEventListener('submit', e => {
     e.preventDefault()
+    const errors = []
 
     validate(form['title'])
     validate(form['imgUrl'])
@@ -24,6 +25,7 @@ function validate(input) {
     if(input.value.trim() === '') {
         parent.classList.add('invalid')
         parent.querySelector('.error').textContent = "This field is required"
+        return false
     }
     else {
         parent.classList.remove('invalid')
