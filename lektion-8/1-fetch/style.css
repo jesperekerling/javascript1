@@ -133,6 +133,10 @@ header {
 .error {
     color: firebrick;
     font-size: .9rem;
+    display: none;
+}
+.invalid.error {
+    display: block;
 }
 .tooltip {
     color: #999;
@@ -141,3 +145,14 @@ header {
     display: flex;
     gap: 2rem;
 }
+.categories {
+    flex: 3;
+}
+.author {
+    flex: 1;
+}
+.form-textarea {
+    resize: none;
+    overflow: none;
+}
+

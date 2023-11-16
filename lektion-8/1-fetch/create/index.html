@@ -12,7 +12,7 @@
     </header>
     <main>
         <div class="container">
-            <form>
+            <form id="createForm">
                 <div class="input-group">
                     <label for="title" class="form-label">Title:</label>
                     <input type="text" id="title" class="form-control" placeholder="Enter blog post title">
@@ -24,13 +24,13 @@
                     <p class="error">Error message</p>
                 </div>
                 <div class="row">
-                    <div class="input-group">
+                    <div class="input-group categories">
                         <label for="categories" class="form-label">Categories:</label>
                         <input type="text" id="categories" class="form-control" placeholder="Categories seperated by ,">
                         <p class="tooltip">Categories seperated by ,</p>
                         <p class="error">Error message</p>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group athor">
                         <label for="author" class="form-label">Author:</label>
                         <select id="author" class="form-control">
                             <option value="Joakim" disabled selected>Joakim</option>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <label for="body" class="form-label">Text:</label>
+                    <label for="body" class="form-label">Post Body:</label>
                     <textarea id="body" cols="30" rows="10" class="form-control form-textarea"></textarea>
                     <p class="error">Error message</p>
                 </div>
