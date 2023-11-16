@@ -1,5 +1,5 @@
 {
-    "post": [
+    "posts": [
         {
             "id": "sd23482384",
             "title": "Blog post 1",
@@ -11,7 +11,7 @@
         {
             "id": "12432w4234234",
             "title": "Blog post 2",
-            "body": "Lorem ipsum dolor sit amet, consectetur adip",
+            "body": "Lorem ipsum dolor sit amet, consectetur adip, Superkoooolt",
             "author": "Janner",
             "categories": ["Travel", "Food"],
             "imgUrl": "https://images.unsplash.com/photo-1699134115052-bd7899efddcc?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
