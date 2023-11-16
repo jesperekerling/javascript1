@@ -15,6 +15,20 @@ body {
     max-width: 1000px;
 }
 
+.btn {
+    background-color: transparent;
+    border: 0;
+}
+.btn-primary {
+    background-color: darkblue;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 1.5rem;
+    display: inline-block;
+    font-weight: 800;
+    cursor: pointer;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -51,6 +65,7 @@ header {
 .content {
     flex: 1;
     padding: 1rem 3rem;
+    position: relative;
 }
 .content_title {
     text-align: left;
@@ -74,10 +89,26 @@ header {
     list-style: none;
     background-color: #eee;
     border-radius: 1rem;
-    padding: 0.3rem 1rem;
+    padding: 0.3em 1em;
 }
 
 .post_body {
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.flex {
+    display: flex;
+}
+.flex-end {
+    justify-content: end;
 }
