@@ -53,15 +53,27 @@ async function createPost() {
         body
     }
 
-    const res = await fetch('http://localhost:3000/posts', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(post)
-    })
-    .then(res => {
-        console.log(res)
-    })
+    try {
 
+        const res = await fetch('http://localhost:3000/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(post)
+        })
+        console.log(res)
+        if(res.status !== 201) {
+            throw new Error(res.status)
+        }
+        
+
+    } catch (error) {
+        console.log(res) 
+        if(res.status !== 201) {
+            console.log(res.status)
+            document.querySelector('#form-error').classList.add('invalid')
+        }
+    }
+    
 }

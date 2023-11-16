@@ -24,13 +24,45 @@
     },
     {
       "title": "fdgh",
-      "imgUrl": "dfgh",
+      "imgUrl": "https://images.unsplash.com/photo-1699134115052-bd7899efddcc?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "categories": [
         "dfgh"
       ],
       "author": "Joakim",
       "body": "dfgh",
       "id": "KGe8tPM"
+    },
+    {
+      "title": "asdfasdf",
+      "imgUrl": "https://images.unsplash.com/photo-1699134115052-bd7899efddcc?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "categories": [
+        "asdf",
+        "12342"
+      ],
+      "author": "Joakim",
+      "body": "sdfgsd",
+      "id": "Sr_BWMx"
+    },
+    {
+      "title": "asdf",
+      "imgUrl": "asdf",
+      "categories": [
+        "asdfasdf"
+      ],
+      "author": "Joakim",
+      "body": "asdfasdf",
+      "id": "L7w-PCy"
+    },
+    {
+      "title": "Testing testing",
+      "imgUrl": "hej.jpg",
+      "categories": [
+        "sdfgdsjuisdfg",
+        "s dfg"
+      ],
+      "author": "Joakim",
+      "body": "Hejjl =)",
+      "id": "cnLbawQ"
     }
   ]
 }
