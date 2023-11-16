@@ -159,3 +159,26 @@ header {
     overflow: none;
 }
 
+
+
+
+
+
+
+.hot {
+    background-color: red;
+    color: white;
+    padding: 1rem 2rem;
+    position: absolute;
+}
+
+.hot-btn {
+    color: gray;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+.hot-btn:hover {
+    color: firebrick;
+}
