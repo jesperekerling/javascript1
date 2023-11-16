@@ -1,6 +1,6 @@
 const form = document.querySelector('#createForm')
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
     const errors = []
 
@@ -34,14 +34,14 @@ function validate(input) {
     }
 }
 
-function createPost() {
+async function createPost() {
     const title = document.querySelector('#title').value
     const imgUrl = document.querySelector('#imgUrl').value
     const categories = document.querySelector('#categories').value
     const author = document.querySelector('#author').value
     const body = document.querySelector('#body').value
 
-    const categoryArray = categories.replace(', ', ',').split(',')
+    const categoryArray = categories.replace(/\s*,\s*/g, ',').split(',')
 
     
 
@@ -52,5 +52,16 @@ function createPost() {
         author,
         body
     }
-    console.log(post)
+
+    const res = await fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(post)
+    })
+    .then(res => {
+        console.log(res)
+    })
+
 }
