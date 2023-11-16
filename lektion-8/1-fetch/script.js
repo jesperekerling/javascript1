@@ -20,7 +20,7 @@ const fetchPosts = async () => {
     }
 }
 
-//fetchPosts();
+fetchPosts();
 
 function renderPosts () {
     const output = document.querySelector('#output')
@@ -60,6 +60,8 @@ function createPostElement(post) {
     postDiv.appendChild(imgContainer)
 
     const contentDiv = createCustomElement('div','content')
+    const hotBtn = createCustomElement('i','fa-solid','hot-btn')
+    hotBtn.addEventListener('click', () => updatePost(post))
     const contentTitle = createCustomElement('h2', 'content_title', post.title)
 
     const info = createCustomElement('div', 'info')
@@ -73,6 +75,11 @@ function createPostElement(post) {
     
     const bodyDiv = createCustomElement('p', 'post_body', post.body.slice(0,100) + '...')
     const link = createCustomElement('a','btn btn-primary bottom-right', 'Read more')
+
+    if(post.hot) {
+        const hot = createCustomElement('p','hot','HOT')
+        contentDiv.appendChild(hot)
+    }
 
 
     contentDiv.append(contentTitle, info, bodyDiv, link)
@@ -92,4 +99,13 @@ function createCustomElement(type, classList, text) {
     }
     return el
 
+}
+
+async function updatePost() {
+    const res = await fetch('')
+    method: 'PUT',
+    headers: {
+
+    },
+    body 
 }

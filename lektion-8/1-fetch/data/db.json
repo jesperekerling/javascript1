@@ -2,6 +2,7 @@
   "posts": [
     {
       "id": "sd23482384",
+      "hot": true,
       "title": "Blog post 1",
       "body": "Lorem ipsum dolor sit amet, consectetur adip",
       "author": "Jesper",
@@ -13,6 +14,7 @@
     },
     {
       "id": "12432w4234234",
+      "hot": false,
       "title": "Blog post 2",
       "body": "Lorem ipsum dolor sit amet, consectetur adip, Superkoooolt",
       "author": "Janner",
@@ -23,37 +25,7 @@
       "imgUrl": "https://images.unsplash.com/photo-1699134115052-bd7899efddcc?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "title": "fdgh",
-      "imgUrl": "https://images.unsplash.com/photo-1699134115052-bd7899efddcc?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categories": [
-        "dfgh"
-      ],
-      "author": "Joakim",
-      "body": "dfgh",
-      "id": "KGe8tPM"
-    },
-    {
-      "title": "asdfasdf",
-      "imgUrl": "https://images.unsplash.com/photo-1699134115052-bd7899efddcc?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "categories": [
-        "asdf",
-        "12342"
-      ],
-      "author": "Joakim",
-      "body": "sdfgsd",
-      "id": "Sr_BWMx"
-    },
-    {
-      "title": "asdf",
-      "imgUrl": "asdf",
-      "categories": [
-        "asdfasdf"
-      ],
-      "author": "Joakim",
-      "body": "asdfasdf",
-      "id": "L7w-PCy"
-    },
-    {
+      "hot": false,
       "title": "Testing testing",
       "imgUrl": "hej.jpg",
       "categories": [
