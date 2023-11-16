@@ -101,11 +101,28 @@ function createCustomElement(type, classList, text) {
 
 }
 
-async function updatePost() {
-    const res = await fetch('')
-    method: 'PUT',
-    headers: {
-
-    },
-    body 
-}
+async function updatePost(post) {
+    const res = await fetch('http://localhost:3000/posts/' + post.id, {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        ...post,
+        hot: !post.hot
+      })
+    })
+  
+    console.log(res)
+    if(res.status !== 200) return
+  
+    
+    // Den här kommer att hämta alla inlägg från databasen på nytt detta kan medföra kostnader beroende på database och trafik
+    // fetchPosts()
+    
+    const newPost = await res.json()
+    // posts.splice(posts.indexOf(post), 1, newPost)
+    post.hot = newPost.hot
+    
+    renderPosts()
+  }
