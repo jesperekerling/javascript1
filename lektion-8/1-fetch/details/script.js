@@ -1,0 +1,5 @@
+const img = document.querySelector('#img')
+const title = document.querySelector('#title')
+const categories = document.querySelector('#categories')
+const author = document.querySelector('#author')
+const body = document.querySelector('#body')
