@@ -1,10 +1,12 @@
+import { createCustomElement from "./lib/helpers/.js" }
+
 console.log(window.location);
 let posts = []
 
 const fetchPosts = async () => {
 
     // Makes categories clickable
-    const query = new URLSearchParams('window.location.search')
+    const query = new URLSearchParams(window.location.search)
     const search = query.get('search')
     
     let url = 'http://localhost:3000/posts'
@@ -105,17 +107,7 @@ function createPostElement(post) {
 }
 
 
-function createCustomElement(type, classList, text) {
-    const el = document.createElement(type)
-    if(classList && classList.length > 0) {
-        el.className = classList
-    }
-    if(text) {
-        el.textContent = text
-    }
-    return el
 
-}
 
 async function updatePost(post) {
     const res = await fetch('http://localhost:3000/posts/' + post.id, {
