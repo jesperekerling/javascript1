@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #222;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000001c;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.modal-bg:has(.open) {
+    display: grid;
+}
+
+.modal {
+    background-color: #666;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 80%;
+    color: #fff;
+}
+
+.btn {
+    padding: .5em 2em;
+    border-radius: .5em;
+    border: 0;
+    margin: 1rem;
+}
