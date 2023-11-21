@@ -1,7 +1,20 @@
-
+console.log(window.location);
 let posts = []
 
 const fetchPosts = async () => {
+
+    // Makes categories clickable
+    const query = new URLSearchParams('window.location.search')
+    const search = query.get('search')
+    
+    let url = 'http://localhost:3000/posts'
+
+    if(search !== null) {
+        url `http://localhost:3000/posts?q=${search}`
+    }
+    
+
+
     try {
         const res = await fetch('http://localhost:3000/posts')
 
@@ -69,6 +82,9 @@ function createPostElement(post) {
     post.categories.forEach(cat => {
         const categoryLi = createCustomElement('li','', cat)
         categories.appendChild(categoryLi)
+        categoryLi.addEventListener('click', () => {
+            window.location.assign(`./?search=${cat}`)
+        })
     })
     const author = createCustomElement('p','', 'Author'+post.author)
     info.append(categories, author)
